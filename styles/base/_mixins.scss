@@ -1,0 +1,7 @@
+@mixin center($t,$r,$b,$l,$a) {
+   top:$t;
+   right:$r;
+   bottom: $b;
+   left: $l; 
+   margin: $a;
+}

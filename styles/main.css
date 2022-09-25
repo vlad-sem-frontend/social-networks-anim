@@ -1,0 +1,220 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: 'Regular-h1';
+  src: url(/Fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Light300-p';
+  src: url(/Fonts/Roboto-Light.ttf);
+}
+
+body {
+  background-color: coral;
+}
+
+.cont {
+  height: 250px;
+  width: 100%;
+  background-color: #48b1c4;
+  margin-top: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.cont .twitter, .cont .facebook, .cont .linkedin, .cont .instagram, .cont .youtube, .cont .tumblr, .cont .dribbble {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 90px;
+  height: 100%;
+  background-color: #82d6f7;
+  border-right: 1px solid #48b1c4;
+  position: relative;
+  overflow: hidden;
+}
+
+.cont .twitter svg, .cont .facebook svg, .cont .linkedin svg, .cont .instagram svg, .cont .youtube svg, .cont .tumblr svg, .cont .dribbble svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 90px;
+  margin: auto;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 55px;
+  height: 55px;
+  margin-left: 0;
+}
+
+.cont .twitter__boxfront {
+  width: 90px;
+  height: 100%;
+  background-color: skyblue;
+  -webkit-transition-property: width;
+  transition-property: width;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.cont .twitter__boxfront i {
+  font-size: 30px;
+  color: white;
+  margin-left: 0;
+  -webkit-animation: all 0.3s;
+          animation: all 0.3s;
+}
+
+.cont .twitter__boxtext {
+  width: 0px;
+  height: 100%;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 90px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cont .facebook {
+  background-color: #3b3bd6;
+}
+
+.cont .linkedin {
+  background-color: #3887ff;
+}
+
+.cont .instagram {
+  background-color: #0a9e0a;
+}
+
+.cont .youtube {
+  background-color: #e61010;
+}
+
+.cont .tumblr {
+  background-color: #27275c;
+}
+
+.cont .dribbble {
+  background-color: #ee7589;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: 'Regular-h1';
+  margin: 50px 0 0 10px;
+  display: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+p {
+  width: 350px;
+  margin: 10px 0 0 10px;
+  font-family: 'Light300-p';
+  font-size: 15px;
+  font-weight: 600;
+  display: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.twitter:hover, .cont .facebook:hover, .cont .linkedin:hover, .cont .instagram:hover, .cont .youtube:hover, .cont .tumblr:hover, .cont .dribbble:hover {
+  cursor: pointer;
+  width: 450px;
+}
+
+.twitter:hover .twitter__boxfront, .cont .facebook:hover .twitter__boxfront, .cont .linkedin:hover .twitter__boxfront, .cont .instagram:hover .twitter__boxfront, .cont .youtube:hover .twitter__boxfront, .cont .tumblr:hover .twitter__boxfront, .cont .dribbble:hover .twitter__boxfront {
+  width: 0px;
+  cursor: pointer;
+}
+
+.twitter:hover .twitter__boxtext, .cont .facebook:hover .twitter__boxtext, .cont .linkedin:hover .twitter__boxtext, .cont .instagram:hover .twitter__boxtext, .cont .youtube:hover .twitter__boxtext, .cont .tumblr:hover .twitter__boxtext, .cont .dribbble:hover .twitter__boxtext {
+  width: 450px;
+}
+
+.twitter:hover h1, .cont .facebook:hover h1, .cont .linkedin:hover h1, .cont .instagram:hover h1, .cont .youtube:hover h1, .cont .tumblr:hover h1, .cont .dribbble:hover h1 {
+  display: inline-block;
+}
+
+.twitter:hover p, .cont .facebook:hover p, .cont .linkedin:hover p, .cont .instagram:hover p, .cont .youtube:hover p, .cont .tumblr:hover p, .cont .dribbble:hover p {
+  display: inline-block;
+}
+
+.twitter:hover i, .cont .facebook:hover i, .cont .linkedin:hover i, .cont .instagram:hover i, .cont .youtube:hover i, .cont .tumblr:hover i, .cont .dribbble:hover i {
+  margin-left: -50px;
+}
+
+.twitter:hover svg, .cont .facebook:hover svg, .cont .linkedin:hover svg, .cont .instagram:hover svg, .cont .youtube:hover svg, .cont .tumblr:hover svg, .cont .dribbble:hover svg {
+  margin-left: -70px;
+  display: block;
+}
+/*# sourceMappingURL=main.css.map */

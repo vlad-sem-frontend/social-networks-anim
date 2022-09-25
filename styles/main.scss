@@ -1,0 +1,137 @@
+@import 'base/base';
+@import 'base/mixins';
+@import 'base/variebles';
+@import'base/fonts';
+body{
+   background-color: coral;
+}
+
+.cont{
+   height: 250px;
+   width: 100%;
+   background-color: rgb(72, 177, 196);
+   margin-top: 120px;
+   display: flex;
+   flex-direction: row;
+   .twitter{
+      transition: all 0.5s;
+      width: $widthblock;
+      height: $heightblock;
+      background-color:rgb(130, 214, 247);  
+      border-right: 1px solid rgb(72, 177, 196);
+      position: relative;
+      overflow: hidden;
+      svg{
+         position: absolute;
+         @include center(0,0,0,90px,auto);
+         transition: all 0.5s;
+         width: 55px;
+         height: 55px;
+         margin-left: 0;
+      }
+      &__boxfront{
+         width: 90px;
+         height: 100%;
+   background-color: skyblue;
+         transition-property:width ;
+         transition-duration: 0.5s;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         overflow: hidden;
+         i{
+            font-size: 30px;
+            color: white;      
+            margin-left: 0;   
+            animation: all 0.3s;
+         
+         }
+      }
+      &__boxtext{
+         width: 0px;
+         height: 100%;
+         background-color: white;
+         transition: all 0.5s;
+position: absolute;
+left: 0;top: 0;
+margin-left: 90px;
+overflow: hidden;
+z-index: 1;
+               }
+}
+   .facebook{
+ @extend .twitter;
+ background-color: rgb(59, 59, 214);
+   }
+   .linkedin{
+      @extend .twitter;
+      background-color: rgb(56, 135, 255);
+   }
+   .instagram{
+      @extend .twitter;
+      background-color: rgb(10, 158, 10);
+   }
+   .youtube{
+      @extend .twitter;
+      background-color: rgb(230, 16, 16);
+   }
+   .tumblr{
+      @extend .twitter;
+      background-color:rgb(39, 39, 92);
+   }
+   .dribbble{
+      @extend .twitter;
+      background-color:rgb(238, 117, 137);
+   }
+   }
+
+   h1{
+      font: {
+         size:40px;
+         family:'Regular-h1';
+      }
+      margin: 50px 0 0 10px;
+      display: none;
+      transition: all 0.5s;
+      }
+      
+      p {
+         width: 350px;
+         margin: 10px 0 0 10px;
+         font: {
+            family:'Light300-p';
+            size:15px;
+            weight:600;
+            
+         }
+         display: none;
+         transition: all 0.5s;
+      }
+      
+
+
+.twitter:hover{
+   cursor: pointer;
+      width: 450px;
+   .twitter__boxfront{
+      width: 0px;
+      cursor: pointer;
+   }
+  
+   .twitter__boxtext{
+      width:450px;
+   }
+   h1{
+      display: inline-block;
+   }
+   p{
+      display: inline-block;
+   }
+i{
+   margin-left: -50px;
+}
+svg{
+   margin-left: -70px;
+   display: block;
+}
+}
